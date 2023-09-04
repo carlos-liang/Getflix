@@ -8,7 +8,7 @@ const MovieSearch = () => {
   const [movies, setMovies] = useState([]);
   const [searchInput, setSearchInput] = useState('');
   const [page, setPage] = useState(1);
-  const [totalPages, setTotalPages] = useState(0); // New state to store the total number of pages
+  const [totalPages, setTotalPages] = useState(0);
 
   const fetchData = async () => {
     try {
@@ -17,7 +17,7 @@ const MovieSearch = () => {
       );
 
       setMovies(response.data.Search || []);
-      setTotalPages(Math.ceil(response.data.totalResults / 10)); // Calculate total pages
+      setTotalPages(Math.ceil(response.data.totalResults / 10));
 
     } catch (error) {
       console.error('Error fetching data:', error);
@@ -26,7 +26,7 @@ const MovieSearch = () => {
 
   useEffect(() => {
     fetchData();
-  }, [searchInput, page]); // Include "page" in the dependency array
+  }, [searchInput, page]);
 
   return (
     <div className="flex flex-col items-center">
