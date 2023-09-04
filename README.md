@@ -37,6 +37,6 @@ language governing permissions and limitations under the License.
 
 ## How to run
 
-Create a .env file and add this to line 1 along with your api key REACT_APP_API_KEY=
-npm install
-npm run dev
+Create a .env file and add this to line 1 along with your api key REACT_APP_API_KEY=</br>
+```npm install```</br>
+```npm run dev```
